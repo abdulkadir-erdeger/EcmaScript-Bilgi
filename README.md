@@ -27,6 +27,33 @@ console.log("X Degeri:"+x)
 ```
 > X Degeri:5
 
+# Spread (...) Operatörü
+### 1- ... operatörü, bir öğeyi daha fazla öğeye genişletir.
+```
+const arabalar = ["Tofaş", "Volvo", ..."BMW"];
+console.log(arabalar)
+```
+>["Tofaş","Volvo","B","M","W"]
+
+### 2- ... operatörü, iki dizinin öğelerini birleştirir.
+```
+const arabalar1 = ["Tofaş", "Volvo", "BMW"];
+const arabalar2=["Ford","Wolkswagen"]
+const tumAraclar=[...arabalar1,...arabalar2]
+
+console.log(tumAraclar)
+```
+>["Tofaş","Volvo","BMW","Ford","Wolkswagen"] 
+
+### 3- ... operatörü, bir dizideki öğeye çağrı yapıldığında bağımsız bir değişkene atamak için kullanılır.
+```
+const numbers = [23,55,21,87,56];
+let maxValue = Math.max(...numbers);
+
+console.log(maxValue)
+```
+>87
+
 # Hazır Metodlar
 ### 1-Includes -> Başvurulan dizi bizim belirttiğimiz değeri içeririyorsa true/değilse false döner.
 ```
