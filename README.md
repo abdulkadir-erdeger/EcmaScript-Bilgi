@@ -54,6 +54,60 @@ console.log(maxValue)
 ```
 >87
 
+# For/Of Döngüsü
+Arrays, Strings, Maps, NodeLists gibi yenilebilir veri yapıları üzerinde döngü oluşturmamızı sağlar.
+```
+const arabalar = ["BMW", "Volvo", "Mini"];
+
+for (let x of arabalar) {
+ console.log(x)
+}
+```
+>BMW <br/>
+Volvo <br/>
+Mini
+
+# Maps
+### 1- Bir Nesneyi anahtar olarak kullanabilmeyi sağlar.
+```
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+console.log(fruits.get("apples"))
+```
+>500
+
+### 2- ***set()*** metodu ile yeni nesne ekleyebiliriz. ***get()*** metodu ile anahtar değerini alabiliriz.
+```
+const fruits = new Map();
+
+fruits.set("apples", 500);
+
+console.log(fruits.get("apples"))
+```
+>500
+
+### 3- ***delete()*** metoduna tanımlanan anahtarı siler.
+```
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+console.log(
+fruits.delete("apples"))
+```
+>true
+
+### 4- ***clear()*** metodu ile tüm ögeleri siler.
+```
+fruits.clear();
+```
+
 # Hazır Metodlar
 ### 1-Includes -> Başvurulan dizi bizim belirttiğimiz değeri içeririyorsa true/değilse false döner.
 ```
